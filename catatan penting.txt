@@ -1,0 +1,7 @@
+1. nama folder projek ini ane namanya mandiri, nyawa terserah ja, tapi ubah di config base_url nya bila nama folder kd sama.
+2. nama database mandiri_order, tinggal di import ja.
+3. hanyar unda ma ulah login, mun hdk coba , localhost/mandiri/public_html/login
+	+ user pass:
+	- khairul khairul
+	- adul adul 
+4. logout, localhost/mandiri/public_html/login/logout
