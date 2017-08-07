@@ -4,4 +4,4 @@
 	+ user pass:
 	- khairul khairul
 	- adul adul 
-4. logout, localhost/mandiri/public_html/login/logout
+4. logout, localhost/mandiri/public_html/login/logouts
