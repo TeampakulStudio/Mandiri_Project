@@ -19,7 +19,13 @@ class Login extends MY_Controller
         }
 
         if ($this->login->login($input)) {
-            redirect(base_url());
+            $level = $this->session->userdata('level');
+            if($level == 'operatorbu'){
+                redirect(base_url().'operatorbu');
+            }else{
+                redirect(base_url());    
+            }
+            
         } else {
             $this->session->set_flashdata('error', 'Email atau password salah!');
         }
