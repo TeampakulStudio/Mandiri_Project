@@ -11,7 +11,7 @@ class Login_model extends MY_Model
         $validationRules = [
             [
                 'field' => 'username',
-                'label' => 'Email',
+                'label' => 'Username',
                 'rules' => 'trim|required'
             ],
             [
