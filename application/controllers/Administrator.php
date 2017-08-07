@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Administrator extends Administrator {
+class Administrator extends Administrator_C {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,6 @@ class Administrator extends Administrator {
 	 */
 	public function index()
 	{
-		$this->load->view('Dashboard/index');
+		$this->load->view('Administrator/index');
 	}
 }

@@ -5,8 +5,14 @@ class Login extends MY_Controller
 	public function index()
     {
         $login = $this->session->userdata('is_login'); 
-        if($login === true)
-             redirect(base_url());
+        if($login === true){
+            $level = $this->session->userdata('level');
+            if($level == 'operatorbu'){
+                redirect(base_url().'operatorbu');
+            }else if($level == 'administrator'){
+                redirect(base_url().'administrator');
+            }
+        }
         if (!$_POST) {
             $input = (object) $this->login->getDefaultValues();
         } else {
@@ -22,6 +28,8 @@ class Login extends MY_Controller
             $level = $this->session->userdata('level');
             if($level == 'operatorbu'){
                 redirect(base_url().'operatorbu');
+            }else if($level == 'administrator'){
+                redirect(base_url().'administrator');
             }else{
                 redirect(base_url());    
             }

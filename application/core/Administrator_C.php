@@ -1,5 +1,5 @@
 <?php
-class Administrator extends MY_Controller
+class Administrator_C extends MY_Controller
 {
     public function __construct()
     {
