@@ -18,6 +18,9 @@
 
 <ul id="tt1" class="easyui-tree" data-options="animate:true,dnd:true">
   
+   <li data-options="iconCls:'icon-home'">
+        <span><a href="">Home</a></span>
+    </li>
     <li data-options="iconCls:'icon-master'">
         <span>Bisnis Order</span>
         <ul>
@@ -38,7 +41,7 @@
 	<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
 	<div data-options="region:'center',title:'Center'">
 	
-	
+
 
 	</div>
 
