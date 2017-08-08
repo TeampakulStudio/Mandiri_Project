@@ -12,4 +12,4 @@
 	
 </head>
 <body class="easyui-layout">
-	<div data-options="region:'north',border:false" style="height:100px;background:#013066;padding:10px">north region</div>
+	<div data-options="region:'north',border:false" style="height:100px;background:#013066;padding:10px"><img src="<?= base_url() ?>assets/images/logo.png" alt="" align="right"  height="80" width="200"></div>
