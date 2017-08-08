@@ -1,5 +1,5 @@
 <?php
-class Admin_Reporting extends MY_Controller
+class Supervisorbu_C extends MY_Controller
 {
     public function __construct()
     {
@@ -14,7 +14,7 @@ class Admin_Reporting extends MY_Controller
             return;
         }
 
-        if ($level !== 'adminreporting') {
+        if ($level !== 'supervisorbu') {
             redirect(base_url().'login');
             return;
         }

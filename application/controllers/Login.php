@@ -8,9 +8,11 @@ class Login extends MY_Controller
         if($login === true){
             $level = $this->session->userdata('level');
             if($level == 'operatorbu'){
-                redirect(base_url().'operatorbu');
+                redirect(base_url().'Operatorbu');
             }else if($level == 'administrator'){
-                redirect(base_url().'administrator');
+                redirect(base_url().'Administrator');
+            }else if($level == 'supervisorbu'){
+                redirect(base_url().'Supervisorbu');
             }
         }
         if (!$_POST) {
