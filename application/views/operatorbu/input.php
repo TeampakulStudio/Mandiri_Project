@@ -16,17 +16,9 @@
 	</table>
 	<script type="text/javascript">
 		var toolbar = [{
-			text:'Add',
+			text:'Tambah',
 			iconCls:'icon-add',
 			handler:function(){alert('add')}
-		},{
-			text:'Cut',
-			iconCls:'icon-cut',
-			handler:function(){alert('cut')}
-		},'-',{
-			text:'Save',
-			iconCls:'icon-save',
-			handler:function(){alert('save')}
 		}];
 	</script>
 
