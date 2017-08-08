@@ -1,7 +1,7 @@
 <div class="easyui-tabs" style="width:100%;height:500px">
 		<div title="Input Data Order" style="padding:10px">
 			<div style="margin:20px 0;"></div>
-	<table class="easyui-datagrid" title="DataGrid with Toolbar" style="width:700px;height:250px"
+	<table class="easyui-datagrid" style="width:100%;height:100%"
 			data-options="rownumbers:true,singleSelect:true,url:'<?= base_url() ?>assets/demo/datagrid/datagrid_data1.json',method:'get',toolbar:toolbar">
 		<thead>
 			<tr>
