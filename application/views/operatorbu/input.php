@@ -19,30 +19,38 @@
 			text:'Tambah',
 			iconCls:'icon-add',
 			handler:    function newUser(){
-        $('#dlg').dialog('open').dialog('setTitle','New User');
+        $('#dlg').dialog('open').dialog('setTitle','Order Baru');
         $('#fm').form('clear');
         url = 'save_user.php';
     }
 		}];
 	</script>
-    <div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+    <div id="dlg" class="easyui-dialog" style="width:1000px;height:280px;padding:10px 20px"
             closed="true" buttons="#dlg-buttons">
         <div class="ftitle">User Information</div>
         <form id="fm" method="post" novalidate>
             <div class="fitem">
-                <label>First Name:</label>
+                <label>Nama Debitur:</label>
                 <input name="firstname" class="easyui-textbox" required="true">
             </div>
             <div class="fitem">
-                <label>Last Name:</label>
+                <label>Limit Kredit:</label>
                 <input name="lastname" class="easyui-textbox" required="true">
             </div>
             <div class="fitem">
-                <label>Phone:</label>
+                <label>Segmen Kredit:</label>
                 <input name="phone" class="easyui-textbox">
             </div>
             <div class="fitem">
-                <label>Email:</label>
+                <label>Jenis Order:</label>
+                <input name="email" class="easyui-textbox" validType="email">
+            </div>
+            <div class="fitem">
+                <label>Jumlah agunan:</label>
+                <input name="email" class="easyui-textbox" validType="email">
+            </div>
+            <div class="fitem">
+                <label>Nama dan no telopon pic debitur:</label>
                 <input name="email" class="easyui-textbox" validType="email">
             </div>
         </form>
