@@ -18,10 +18,39 @@
 		var toolbar = [{
 			text:'Tambah',
 			iconCls:'icon-add',
-			handler:function(){alert('add')}
+			handler:    function newUser(){
+        $('#dlg').dialog('open').dialog('setTitle','New User');
+        $('#fm').form('clear');
+        url = 'save_user.php';
+    }
 		}];
 	</script>
-
+    <div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+            closed="true" buttons="#dlg-buttons">
+        <div class="ftitle">User Information</div>
+        <form id="fm" method="post" novalidate>
+            <div class="fitem">
+                <label>First Name:</label>
+                <input name="firstname" class="easyui-textbox" required="true">
+            </div>
+            <div class="fitem">
+                <label>Last Name:</label>
+                <input name="lastname" class="easyui-textbox" required="true">
+            </div>
+            <div class="fitem">
+                <label>Phone:</label>
+                <input name="phone" class="easyui-textbox">
+            </div>
+            <div class="fitem">
+                <label>Email:</label>
+                <input name="email" class="easyui-textbox" validType="email">
+            </div>
+        </form>
+    </div>
+    <div id="dlg-buttons">
+        <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+    </div>
 
 		</div>
 
