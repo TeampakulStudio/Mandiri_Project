@@ -19,7 +19,7 @@ class Supervisorbu extends Supervisorbu_C
     }
 
     public function show(){
-        $rs = $this->db->where('status','Outstanding')->order_by('id_order','desc')->get('data_order')->result();
+        $rs = $this->db->where('status','Waiting')->order_by('id_order','desc')->get('data_order')->result();
         $result = array();
         foreach ($rs as $r) {
             array_push($result, $r);
@@ -31,7 +31,7 @@ class Supervisorbu extends Supervisorbu_C
     public function update($id){
         $waktu_acc =  $waktu = date('Y-m-d H:i:s');
         $data = array(
-            'status' => 'Approved',
+            'status' => 'Outstanding',
             'waktu_acc' => $waktu_acc
             );
         $result = $this->db->where('id_order',$id)->update('data_order', $data);
