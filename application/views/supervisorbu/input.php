@@ -21,22 +21,59 @@
     </thead>
 </table>
 <div id="toolbar">
-  <a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editUser()">Approv</a>
+  <a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="editUser()">Approve</a>
    
 </div>
-<div id="dlg" class="easyui-dialog" style="width:300px;height:140px;padding:10px 20px"
+<div id="dlg" class="easyui-dialog" style="width:600px;height:480px;padding:10px 20px"
         closed="true" buttons="#dlg-buttons">
-    <div class="ftitle"></div>
+    <div class="ftitle">Order Information</div>
     <form id="fm" method="post" novalidate>
         <div class="fitem">
-            <label>Sure to approve This Order ?</label>
+            <label>Nama Debitur:</label>
+            <input id="tb" name="nama_debitur" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Email Debitur:</label>
+            <input id="tb2" name="email_debitur" validType="email" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Limit Kredit:</label>
+            <input id="tb3" name="limit_kredit" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Segmen Kredit:</label>
+            <input id="tb4" name="segmen_kredit" required="true" class="easyui-textbox" >
+        </div>
+        <div class="fitem">
+        <label>Jenis Order:</label>
+            <select id="tb5" class="easyui-combobox" name="jenis_order" required="true">
+                <option value="Notaris">Notaris</option>
+                <option value="Asuransi">Asuransi</option>
+                <option value="KJPP">KJPP</option>
+            </select>
+        </div>
+        <div class="fitem">
+            <label>Detail Agunan:</label>
+            <textarea style="height:200px; width:100%" id="tb6" readonly="true" name="detail_agunan" required="true" class="easyui-textarea" ></textarea>
+        </div>
+        <div class="fitem">
+            <label>Nama PIC Deb:</label>
+            <input id="tb7" name="nama_pic_debitur" required="true" class="easyui-textbox" >
+        </div>
+        <div class="fitem">
+            <label>No Telp PIC Deb:</label>
+            <input id="tb8" name="telpon_pic_debitur" required="true" class="easyui-textbox" >
+        </div>
+        <div class="fitem">
+            <label>Status:</label>
+            <input id="tb9" name="status" required="true" class="easyui-textbox" >
         </div>
 
 
     </form>
 </div>
 <div id="dlg-buttons">
-    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Approve</a>
     <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
 </div>
    
@@ -50,6 +87,14 @@
 	
 
 function editUser(){
+    $('#tb').textbox('readonly');
+    $('#tb2').textbox('readonly');
+    $('#tb3').textbox('readonly');
+    $('#tb4').textbox('readonly');
+    $('#tb5').combo('readonly');
+    $('#tb7').textbox('readonly');
+    $('#tb8').textbox('readonly');
+    $('#tb9').textbox('readonly');
             var row = $('#dg').datagrid('getSelected');
             if (row){
                 $('#dlg').dialog('open').dialog('setTitle','Approve Order');
