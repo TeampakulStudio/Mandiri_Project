@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dashboard</title>
-	
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/demo/demo.css">

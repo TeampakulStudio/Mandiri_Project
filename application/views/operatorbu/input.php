@@ -1,64 +1,115 @@
 <div class="easyui-tabs" style="width:100%;height:500px">
 		<div title="Input Data Order" style="padding:10px">
 			<div style="margin:20px 0;"></div>
-	<table class="easyui-datagrid" style="width:100%;height:100%"
-			data-options="rownumbers:true,singleSelect:true,url:'<?= base_url() ?>assets/demo/datagrid/datagrid_data1.json',method:'get',toolbar:toolbar">
-		<thead>
-			<tr>
-				<th data-options="field:'itemid',width:100">Nama Debitur</th>
-				<th data-options="field:'productid',width:100">Limit Kredit</th>
-				<th data-options="field:'listprice',width:110,align:'right'">Segmen Kredit</th>
-				<th data-options="field:'unitcost',width:80,align:'right'">Jenis Order</th>
-				<th data-options="field:'attr1',width:80">Attribute</th>
-				<th data-options="field:'status',width:60,align:'center'">Status</th>
-			</tr>
-		</thead>
-	</table>
-	<script type="text/javascript">
-		var toolbar = [{
-			text:'Tambah',
-			iconCls:'icon-add',
-			handler:    function newUser(){
-        $('#dlg').dialog('open').dialog('setTitle','Order Baru');
-        $('#fm').form('clear');
-        url = 'save_user.php';
-    }
-		}];
-	</script>
-    <div id="dlg" class="easyui-dialog" style="width:1000px;height:280px;padding:10px 20px"
-            closed="true" buttons="#dlg-buttons">
-        <div class="ftitle">User Information</div>
-        <form id="fm" method="post" novalidate>
-            <div class="fitem">
-                <label>Nama Debitur:</label>
-                <input name="firstname" class="easyui-textbox" required="true">
-            </div>
-            <div class="fitem">
-                <label>Limit Kredit:</label>
-                <input name="lastname" class="easyui-textbox" required="true">
-            </div>
-            <div class="fitem">
-                <label>Segmen Kredit:</label>
-                <input name="phone" class="easyui-textbox">
-            </div>
-            <div class="fitem">
-                <label>Jenis Order:</label>
-                <input name="email" class="easyui-textbox" validType="email">
-            </div>
-            <div class="fitem">
-                <label>Jumlah agunan:</label>
-                <input name="email" class="easyui-textbox" validType="email">
-            </div>
-            <div class="fitem">
-                <label>Nama dan no telopon pic debitur:</label>
-                <input name="email" class="easyui-textbox" validType="email">
-            </div>
-        </form>
-    </div>
-    <div id="dlg-buttons">
-        <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
-    </div>
+	
+	<table id="dg" title="Data Order" class="easyui-datagrid" style="width:98%;height:75%"
+        url="<?= base_url() ?>Operatorbu/show"
+        toolbar="#toolbar"
+        rownumbers="true" fitColumns="true" singleSelect="true">
+    <thead>
+        <tr>
+            <th field="nama_debitur" width="50">Nama Debitur</th>
+            <th field="email_debitur" width="50">Email Debitur</th>
+            <th field="limit_kredit" width="50">Limit Kredit</th>
+            <th field="segmen_kredit" width="50">Segmen Kredit</th>
+            <th field="jenis_order" width="50">Jenis Order</th>
+            <th field="detail_agunan" width="50">Agunan</th>
+            <th field="nama_pic_debitur" width="50">Nama PIC Deb</th>
+            <th field="telpon_pic_debitur" width="50">No Telp PIC Deb</th>
+        </tr>
+    </thead>
+</table>
+<div id="toolbar">
+    <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New Order</a>
+   
+</div>
+<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+        closed="true" buttons="#dlg-buttons">
+    <div class="ftitle">Order Information</div>
+    <form id="fm" method="post" novalidate>
+        <div class="fitem">
+            <label>Nama Debitur:</label>
+            <input name="nama_debitur" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Email Debitur:</label>
+            <input name="email_debitur" validType="email" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Limit Kredit:</label>
+            <input name="limit_kredit" class="easyui-textbox" required="true">
+        </div>
+        <div class="fitem">
+            <label>Segmen Kredit:</label>
+            <input name="segmen_kredit" required="true" class="easyui-textbox" >
+        </div>
+        <div class="fitem">
+        <label>Jenis Order:</label>
+        	<select id="cc" class="easyui-combobox" name="jenis_order" required="true">
+			    <option value="Notaris">Notaris</option>
+			    <option value="Asuransi">Asuransi</option>
+			    <option value="KJPP">KJPP</option>
+			</select>
+        </div>
+        <div class="fitem">
+            <label>Detail Agunan:</label>
+            <textarea name="detail_agunan" required="true" class="easyui-textarea" ></textarea>
+        </div>
+        <div class="fitem">
+            <label>Nama PIC Deb:</label>
+            <input name="nama_pic_debitur" required="true" class="easyui-textbox" >
+        </div>
+        <div class="fitem">
+            <label>No Telp PIC Deb:</label>
+            <input name="telpon_pic_debitur" required="true" class="easyui-textbox" >
+        </div>
+
+
+    </form>
+</div>
+<div id="dlg-buttons">
+    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
+</div>
+   
+
+		</div>
+
+	</div>
+	</div>
+
+<script type="text/javascript">
+	function newUser(){
+    $('#dlg').dialog('open').dialog('setTitle','New Order');
+    $('#fm').form('clear');
+    url = '<?= base_url() ?>Operatorbu/save';
+}
+
+
+
+
+function saveUser(){
+    $('#fm').form('submit',{
+        url: url,
+        onSubmit: function(){
+            return $(this).form('validate');
+        },
+        success: function(result){
+            var result = eval('('+result+')');
+            if (result.errorMsg){
+                $.messager.show({
+                    title: 'Error',
+                    msg: result.errorMsg
+                });
+            } else {
+                $('#dlg').dialog('close');        // close the dialog
+                $('#dg').datagrid('reload');    // reload the user data
+            }
+        }
+    });
+}
+
+</script>
 
 		</div>
 
