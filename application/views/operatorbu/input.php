@@ -1,8 +1,8 @@
 <div class="easyui-tabs" style="width:100%;height:500px">
-		<div title="Input Data Order" style="padding:10px">
-			<div style="margin:20px 0;"></div>
-	
-	<table id="dg" title="Data Order" class="easyui-datagrid" style="width:98%;height:75%"
+        <div title="Input Data Order" style="padding:10px">
+            <div style="margin:20px 0;"></div>
+    
+    <table id="dg" title="Data Order" class="easyui-datagrid" style="width:98%;height:75%"
         url="<?= base_url() ?>Operatorbu/show"
         toolbar="#toolbar"
         rownumbers="true" fitColumns="true" singleSelect="true">
@@ -23,47 +23,58 @@
     <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New Order</a>
    
 </div>
-<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+<div id="dlg" class="easyui-dialog" style="width:500px;height:500px;padding:10px 20px"
         closed="true" buttons="#dlg-buttons">
-    <div class="ftitle">Order Information</div>
+    
     <form id="fm" method="post" novalidate>
-        <div class="fitem">
-            <label>Nama Debitur:</label>
-            <input name="nama_debitur" class="easyui-textbox" required="true">
-        </div>
-        <div class="fitem">
-            <label>Email Debitur:</label>
-            <input name="email_debitur" validType="email" class="easyui-textbox" required="true">
-        </div>
-        <div class="fitem">
-            <label>Limit Kredit:</label>
-            <input name="limit_kredit" class="easyui-textbox" required="true">
-        </div>
-        <div class="fitem">
-            <label>Segmen Kredit:</label>
-            <input name="segmen_kredit" required="true" class="easyui-textbox" >
-        </div>
-        <div class="fitem">
-        <label>Jenis Order:</label>
-        	<select id="cc" class="easyui-combobox" name="jenis_order" required="true">
-			    <option value="Notaris">Notaris</option>
-			    <option value="Asuransi">Asuransi</option>
-			    <option value="KJPP">KJPP</option>
-			</select>
-        </div>
-        <div class="fitem">
-            <label>Detail Agunan:</label>
-            <textarea name="detail_agunan" required="true" class="easyui-textarea" ></textarea>
-        </div>
-        <div class="fitem">
-            <label>Nama PIC Deb:</label>
-            <input name="nama_pic_debitur" required="true" class="easyui-textbox" >
-        </div>
-        <div class="fitem">
-            <label>No Telp PIC Deb:</label>
-            <input name="telpon_pic_debitur" required="true" class="easyui-textbox" >
-        </div>
+     <table style="width:100%">
+  <tr>
+    <td width="25%"><label>Nama Debitur</label></td>
+    <td>:</td>
+    <td><input name="nama_debitur" class="easyui-textbox" required="true"></td>
+  </tr>
+  <tr>
+    <td><label>Email Debitur</label></td>
+    <td>:</td>
+    <td><input name="email_debitur" validType="email" class="easyui-textbox" required="true"></td>
+  </tr>
+  <tr>
+    <td><label>Limit Kredit</label></td>
+    <td>:</td>
+    <td><input name="limit_kredit" class="easyui-textbox" required="true"</td>
+  </tr>
+  <tr>
+    <td><label>Segmen Kredit</label></td>
+    <td>:</td>
+    <td><input name="segmen_kredit" required="true" class="easyui-textbox" ></td>
+  </tr>
+  <tr>
+    <td><label>Jenis Order</label></td>
+    <td>:</td>
+    <td><select id="cc" class="easyui-combobox" name="jenis_order" required="true">
+                <option value="Notaris">Notaris</option>
+                <option value="Asuransi">Asuransi</option>
+                <option value="KJPP">KJPP</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <td><label>Detail Agunan</label></td>
+    <td>:</td>
+    <td><textarea name="detail_agunan" required="true" class="easyui-textarea" ></textarea></td>
+  </tr>
+  <tr>
+    <td><label>Nama PIC Deb</label></td>
+    <td>:</td>
+    <td><input name="nama_pic_debitur" required="true" class="easyui-textbox" ></td>
+  </tr>
+  <tr>
+    <td><label>No Telp PIC Deb</label></td>
+    <td>:</td>
+    <td><input name="telpon_pic_debitur" required="true" class="easyui-textbox" ></td>
+  </tr>     
 
+</table> 
 
     </form>
 </div>
@@ -73,13 +84,13 @@
 </div>
    
 
-		</div>
+        </div>
 
-	</div>
-	</div>
+    </div>
+    </div>
 
 <script type="text/javascript">
-	function newUser(){
+    function newUser(){
     $('#dlg').dialog('open').dialog('setTitle','New Order');
     $('#fm').form('clear');
     url = '<?= base_url() ?>Operatorbu/save';
@@ -111,7 +122,7 @@ function saveUser(){
 
 </script>
 
-		</div>
+        </div>
 
-	</div>
-	
+    </div>
+    
