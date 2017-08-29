@@ -1,0 +1,4 @@
+
+*.php
+application/config/config.php
+application/config/autoload.php
