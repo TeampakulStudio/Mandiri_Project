@@ -7,9 +7,11 @@
         <span><a href="<?= base_url(); ?>Operatorbu">Home</a></span>
     </li>
     <li data-options="iconCls:'icon-master'">
-        <span>Bisnis Order</span>
+        <span>Input Data Order</span>
         <ul>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Input Data Order</a></li>
+            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Asuransi</a></li>
+            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">KJPP</a></li>
+            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Notaris</a></li>
      
         </ul>
     </li>
