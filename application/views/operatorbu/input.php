@@ -1,128 +1,118 @@
-<div class="easyui-tabs" style="width:100%;height:500px">
-        <div title="Input Data Order" style="padding:10px">
-            <div style="margin:20px 0;"></div>
-    
-    <table id="dg" title="Data Order" class="easyui-datagrid" style="width:98%;height:75%"
-        url="<?= base_url() ?>Operatorbu/show"
-        toolbar="#toolbar"
-        rownumbers="true" fitColumns="true" singleSelect="true">
-    <thead>
-        <tr>
-            <th field="nama_debitur" width="50">Nama Debitur</th>
-            <th field="email_debitur" width="50">Email Debitur</th>
-            <th field="limit_kredit" width="50">Limit Kredit</th>
-            <th field="segmen_kredit" width="50">Segmen Kredit</th>
-            <th field="jenis_order" width="50">Jenis Order</th>
-            <th field="detail_agunan" width="50">Agunan</th>
-            <th field="nama_pic_debitur" width="50">Nama PIC Deb</th>
-            <th field="telpon_pic_debitur" width="50">No Telp PIC Deb</th>
-        </tr>
-    </thead>
-</table>
-<div id="toolbar">
-    <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()">New Order</a>
-   
-</div>
-<div id="dlg" class="easyui-dialog" style="width:500px;height:500px;padding:10px 20px"
-        closed="true" buttons="#dlg-buttons">
-    
-    <form id="fm" method="post" novalidate>
-     <table style="width:100%">
-  <tr>
-    <td width="25%"><label>Nama Debitur</label></td>
-    <td>:</td>
-    <td><input name="nama_debitur" class="easyui-textbox" required="true"></td>
-  </tr>
-  <tr>
-    <td><label>Email Debitur</label></td>
-    <td>:</td>
-    <td><input name="email_debitur" validType="email" class="easyui-textbox" required="true"></td>
-  </tr>
-  <tr>
-    <td><label>Limit Kredit</label></td>
-    <td>:</td>
-    <td><input name="limit_kredit" class="easyui-textbox" required="true"</td>
-  </tr>
-  <tr>
-    <td><label>Segmen Kredit</label></td>
-    <td>:</td>
-    <td><input name="segmen_kredit" required="true" class="easyui-textbox" ></td>
-  </tr>
-  <tr>
-    <td><label>Jenis Order</label></td>
-    <td>:</td>
-    <td><select id="cc" class="easyui-combobox" name="jenis_order" required="true">
-                <option value="Notaris">Notaris</option>
-                <option value="Asuransi">Asuransi</option>
-                <option value="KJPP">KJPP</option>
-        </select>
-    </td>
-  </tr>
-  <tr>
-    <td><label>Detail Agunan</label></td>
-    <td>:</td>
-    <td><textarea name="detail_agunan" required="true" class="easyui-textarea" ></textarea></td>
-  </tr>
-  <tr>
-    <td><label>Nama PIC Deb</label></td>
-    <td>:</td>
-    <td><input name="nama_pic_debitur" required="true" class="easyui-textbox" ></td>
-  </tr>
-  <tr>
-    <td><label>No Telp PIC Deb</label></td>
-    <td>:</td>
-    <td><input name="telpon_pic_debitur" required="true" class="easyui-textbox" ></td>
-  </tr>     
+<div class="easyui-tabs">
+    <div title="Input Data Order" style="padding-left:10px; padding-right:20px; ">
 
-</table> 
+ <form action="<?= base_url() ?>Operatorbu/input" method="post">
+        <div style="margin:20px 0;"></div>
+         <?php $this->load->view('_partial/flash_message') ?>
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+             
+                <!-- form start -->
+                <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Data Order</h3>
+                </div>
+                            
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label>Nama Debitur</label>
+                      <input type="text" required="1" name="nama_debitur" class="form-control" placeholder="Enter Nama Debitur">
+                    </div>
+                   
+                    <div class="form-group">
+                      <label>Limit Kredit</label>
+                      <input type="text" name="limit_kredit" class="form-control" placeholder="Enter Limit Kredit">
+                    </div>
+                    <div class="form-group">
+                      <label>Segmen Kredit</label>
+                      <input type="text" name="segmen_kredit" class="form-control" placeholder="Enter Segmen Kredit">
+                    </div>
+                    <div class="form-group">
+                      <label>Jenis Order</label>
+                      <select name="jenis_order" class="form-control">
+                        <option value="Asuransi">Asuransi</option>
+                        <option value="Notaris">Notaris</option>
+                        <option value="KJPP">KJPP</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Nama PIC Debitur</label>
+                      <input type="text" name="nama_pic_debitur" class="form-control" placeholder="Enter Nama PIC Debitur">
+                    </div>
+                    <div class="form-group">
+                      <label>Telp PIC Debitur</label>
+                      <input type="text" name="telpon_pic_debitur" class="form-control" placeholder="Enter Telpon PIC Debitur">
+                    </div>
+                    
+                  </div><!-- /.box-body -->
 
-    </form>
-</div>
-<div id="dlg-buttons">
-    <a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveUser()" style="width:90px">Save</a>
-    <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">Cancel</a>
-</div>
-   
+                 </div>
+             </div><!--col-md-6-->
+             <div class="col-md-6">
+            <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Agunan</h3>
+                </div><!-- /.box-header -->
+             <!-- Horizontal Form -->
+             
+                <!-- form start -->
+              
+                  <div class="box-body  after-add-more">
+                    <div class="control-group form-group">
+                      <label for="inputEmail3" class="control-label">No</label>
+                     
+                        <input type="text" required="true" name="no[]" class="form-control" placeholder="No. SHM/SHGB/SHGU/SHMSRS">
+                     
+                    </div>
+                    <div class="control-group form-group">
+                      <label for="inputPassword3" class=" control-label">Alamat</label>
+                        <input required="1" type="text" name="alamat[]" class="form-control" id="inputPassword3" placeholder="alamat">
+                    </div>
+                    <div class="control-group form-group">
+                      <label for="inputPassword3" class=" control-label">Nama Pemilik</label>
+                        <input required="1" type="text" name="nama_pemilik[]" class="form-control" id="inputPassword3" placeholder="alamat">
+                    </div>
+                    
+                    
+                    <div class="box-footer">
+                    <button type="button" class="btn btn-info pull-left add-more">Add More</button>
+                    <button type="submit" name="submit" class="btn btn-success control-group pull-right">Submit</button>
+                  </div><!-- /.box-footer -->
 
-        </div>
-
-    </div>
-    </div>
-
-<script type="text/javascript">
-    function newUser(){
-    $('#dlg').dialog('open').dialog('setTitle','New Order');
-    $('#fm').form('clear');
-    url = '<?= base_url() ?>Operatorbu/save';
-}
+                  </div><!-- /.box-body -->
+                
+                </div>
+              </div><!-- /.col-md-6 -->
 
 
 
-
-function saveUser(){
-    $('#fm').form('submit',{
-        url: url,
-        onSubmit: function(){
-            return $(this).form('validate');
-        },
-        success: function(result){
-            var result = eval('('+result+')');
-            if (result.errorMsg){
-                $.messager.show({
-                    title: 'Error',
-                    msg: result.errorMsg
-                });
-            } else {
-                $('#dlg').dialog('close');        // close the dialog
-                $('#dg').datagrid('reload');    // reload the user data
-            }
-        }
-    });
-}
-
-</script>
-
-        </div>
+             </div><!-- /.row -->
+        </form>
+        <div class="copy hide">
+          <div class="box-body control-group">
+                    <div class="control-group form-group">
+                      <label for="inputEmail3" class="control-label">No</label>
+                     
+                        <input type="text" required="true" name="no[]" class="form-control" placeholder="No. SHM/SHGB/SHGU/SHMSRS">
+                     
+                    </div>
+                    <div class="control-group form-group">
+                      <label for="inputPassword3" class=" control-label">Alamat</label>
+                        <input type="text" required="1" name="alamat[]" class="form-control" id="inputPassword3" placeholder="alamat">
+                    </div>
+                    <div class="control-group form-group">
+                      <label for="inputPassword3" class=" control-label">Nama pemilik</label>
+                        <input required="1" type="text" name="nama_pemilik[]" class="form-control" id="inputPassword3" placeholder="alamat">
+                    </div>
+                    
+                    <div class="control-group box-footer">
+                    <button type="button" class="btn btn-danger pull-right remove">Remove</button>
+                  </div><!-- /.box-footer -->
+            </div><!-- /.box-body -->
+        </div><!-- /.copy hide -->
 
     </div>
+</div>
     

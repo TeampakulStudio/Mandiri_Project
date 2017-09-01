@@ -9,7 +9,8 @@
     <li data-options="iconCls:'icon-master'">
         <span>Bisnis Order</span>
         <ul>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Supervisorbu/input">Input Data Order</a></li>
+            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Supervisorbu/data">Data Order</a></li>
+            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Supervisorbu/dataapprov">Data Approved</a></li>
      
         </ul>
     </li>
