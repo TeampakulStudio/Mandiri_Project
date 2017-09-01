@@ -17,6 +17,7 @@
                         <th>Jenis Order</th>
                         <th>Nama PIC Deb</th>
                         <th>Telpon PIC Deb</th>
+                        <th>Status</th>
                         <th>Action</th>
                        
                       </tr>
@@ -38,6 +39,7 @@
                         <td><?= $value->jenis_order; ?></td>
                         <td><?= $value->nama_pic_debitur; ?></td>
                         <td><?= $value->telpon_pic_debitur; ?></td>
+                        <td><?= $value->status; ?></td>
                         <td><a href="<?= base_url(); ?>Operatorbu/detail/<?= $value->id_order; ?>"<button class="btn btn-info">Detail</button> </a></td>
                         
                       </tr>
