@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/themes/icon.css">
+<<<<<<< HEAD
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/demo/demo.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -20,6 +19,9 @@
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/skins/_all-skins.min.css">
 	
+=======
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/demo/demo.css">	
+>>>>>>> 72bfe1f4f0037697387683fbe448c9be2f251472
 </head>
 <body class="easyui-layout">
 	<div data-options="region:'north',border:false" style="height:100px;background:#013066;padding:10px"><img src="<?= base_url() ?>assets/images/logo.png" alt="" align="right"  height="80" width="200"></div>
