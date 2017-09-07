@@ -29,6 +29,11 @@
                       <label class="col-sm-1">:</label>
                       <label for="inputEmail3" class="col-sm-7 control-label"><?= $order->jenis_order; ?></label>
                     </div>
+                     <div class="form-group">
+                      <label for="inputEmail3" class="col-sm-4 control-label">Nama Rekanan</label>
+                      <label class="col-sm-1">:</label>
+                      <label for="inputEmail3" class="col-sm-7 control-label"><?= $rekanan->nama; ?></label>
+                    </div>
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-4 control-label">Nama PIC Deb</label>
                       <label class="col-sm-1">:</label>
