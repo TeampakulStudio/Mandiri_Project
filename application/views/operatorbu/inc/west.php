@@ -9,15 +9,13 @@
     <li data-options="iconCls:'icon-master'">
         <span>Input Data Order</span>
         <ul>
-<<<<<<< HEAD
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Input Data Order</a></li>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/data">Data Order</a></li>
-=======
+
+         
+            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/data" >Data Order</a></li>
             <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Asuransi</a></li>
             <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">KJPP</a></li>
             <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Notaris</a></li>
->>>>>>> 72bfe1f4f0037697387683fbe448c9be2f251472
-     
+
         </ul>
     </li>
 
@@ -30,5 +28,11 @@
 
 	</div>
 	
-<div data-options="region:'south',border:false" style="height:50px;background:#A9FACD;padding:10px;">south region</div>
+<div data-options="region:'south',border:false" style="height:50px;background:#013066;padding:10px;"></div>
     <div data-options="region:'center',title:'Center'">
+ 
+
+    <div id="tt" class="easyui-tabs" style="width:100%;height:100%">
+ 
+        
+  
