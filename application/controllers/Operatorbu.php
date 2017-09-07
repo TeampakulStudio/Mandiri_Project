@@ -25,8 +25,15 @@ class Operatorbu extends Operatorbu_C
 
             $where = "outstanding < 5 AND jenis_order = '$jenis_order' AND (limit_kredit = $limit_kredit or limit_kredit > $limit_kredit)";
             $rekanan = $this->db->where($where)->order_by('outstanding')->get('rekanan')->row();
-            if($rekanan->id){
-                $rekanan = $rekanan->id;
+            $id = $rekanan->id;
+            if($id){
+                $dulu = $rekanan->outstanding;
+                $sekarang = $dulu + 1;
+                $update = array(
+                    'outstanding' => $sekarang
+                    );
+                $update = $this->db->where('id',$id)->update('rekanan', $update);
+                $rekanan = $id;
             }else{
                 echo "kesalahan";die();
             }
