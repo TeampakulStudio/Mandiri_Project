@@ -1,4 +1,5 @@
-<div title="Input" data-options="closable:true" style="padding:10px">
+<div class="easyui-tabs">
+    <div title="Input Data Order" style="padding-left:10px; padding-right:20px; ">
 
  <form action="<?= base_url() ?>Operatorbu/input" method="post">
         <div style="margin:20px 0;"></div>
@@ -112,6 +113,6 @@
             </div><!-- /.box-body -->
         </div><!-- /.copy hide -->
 
-
+    </div>
 </div>
     

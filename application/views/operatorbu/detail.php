@@ -1,4 +1,5 @@
-
+<div class="easyui-tabs">
+    <div title="Data Order" style="padding-left:10px; padding-right:20px; ">
 		<div class="row">
             <!-- left column -->
             <div class="col-md-6">
@@ -109,4 +110,5 @@
 
 
              </div><!-- /.row -->
-   
+    </div>
+</div>

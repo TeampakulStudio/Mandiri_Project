@@ -1,24 +1,26 @@
-
- 
-
-<div title="Data Order" data-options="closable:true" style="padding:10px">
-    <table id="tt" class="easyui-datagrid" style="width:100%;height:auto;">
-        <thead>
-            <tr>
-                <th field="No" width="50">No</th>
-                <th field="name2" width="100" >Nama Debitur</th>
-                <th field="name3"  width="100" >Limit Kredit</th>
-                <th field="name4" width="100"  >Segmen Kredit</th>
-                <th field="name5"  width="100" >Jenis Order</th>
-                <th field="name7" width="100"  >Nama PIC Deb</th>
-                <th field="name8" width="120"  >Telpon PIC Deb</th>
-                <th field="name9"  width="100" >Status</th>
-                <th field="name10" width="100"  >Action</th>
-             
-            </tr>                          
-        </thead>                           
-        <tbody>                            
-          </tr>
+<div class="easyui-tabs">
+    <div title="Data Order" style="padding-left:10px; padding-right:20px; ">
+	<div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+                <div class="box-header">
+                  <h3 class="box-title">Data Order</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+                  <table id="example2" class="table table-bordered table-hover">
+                    <thead>
+                      <tr>
+                        <th>No</th>
+                        <th>Nama Debitur</th>
+                        <th>Limit Kredit</th>
+                        <th>Segmen Kredit</th>
+                        <th>Jenis Order</th>
+                        <th>Nama PIC Deb</th>
+                        <th>Telpon PIC Deb</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                       
+                      </tr>
                     </thead>
                     <tbody>
                     <?php
@@ -47,9 +49,12 @@
                     ?>
                     </tbody>
                     </tfoot>
-                      
-        </tbody>                           
-    </table>
-	
 
+                  </table>
+                </div><!-- /.box-body -->
+              </div><!-- /.box -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+
+    </div>
 </div>
