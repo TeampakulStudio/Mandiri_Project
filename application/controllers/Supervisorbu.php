@@ -29,6 +29,7 @@ class Supervisorbu extends Supervisorbu_C
         $user = $data['order']->id_user;
         $data['user'] = $this->db->where('id',$user)->get('user')->row();
         $data['agunan'] = $this->db->where('id_order',$id)->get('agunan')->result();
+         $data['rekanan'] = $this->db->select('*')->from('data_order')->join('rekanan','rekanan.id = data_order.rekanan')->get()->row();
          $this->load->view('supervisorbu/inc/north');
         $this->load->view('supervisorbu/inc/west');
         $this->load->view('supervisorbu/detaildata',$data);
@@ -40,6 +41,7 @@ class Supervisorbu extends Supervisorbu_C
         $user = $data['order']->id_user;
         $data['user'] = $this->db->where('id',$user)->get('user')->row();
         $data['agunan'] = $this->db->where('id_order',$id)->get('agunan')->result();
+
          $this->load->view('supervisorbu/inc/north');
         $this->load->view('supervisorbu/inc/west');
         $this->load->view('supervisorbu/detailapp',$data);

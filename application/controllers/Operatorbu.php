@@ -22,6 +22,14 @@ class Operatorbu extends Operatorbu_C
             $jenis_order = $this->input->post('jenis_order');
             $nama_pic_debitur = $this->input->post('nama_pic_debitur');
             $telpon_pic_debitur = $this->input->post('telpon_pic_debitur');
+
+            $where = "outstanding < 5 AND jenis_order = '$jenis_order' AND (limit_kredit = $limit_kredit or limit_kredit > $limit_kredit)";
+            $rekanan = $this->db->where($where)->order_by('outstanding')->get('rekanan')->row();
+            if($rekanan->id){
+                $rekanan = $rekanan->id;
+            }else{
+                echo "kesalahan";die();
+            }
         
             //agunan
             $order = array(
@@ -31,7 +39,8 @@ class Operatorbu extends Operatorbu_C
                 'segmen_kredit' => $segmen_kredit,
                 'jenis_order' => $jenis_order,
                 'nama_pic_debitur' => $nama_pic_debitur,
-                'telpon_pic_debitur' => $telpon_pic_debitur
+                'telpon_pic_debitur' => $telpon_pic_debitur,
+                'rekanan' => $rekanan
                 );
             $insert = $this->db->insert('data_order', $order);
             $id_order = $this->db->insert_id();
