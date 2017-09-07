@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2017 at 07:39 AM
+-- Generation Time: Sep 07, 2017 at 04:29 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -65,7 +65,7 @@ INSERT INTO `agunan` (`id_agunan`, `no`, `alamat`, `nama_pemilik`, `id_order`) V
 CREATE TABLE IF NOT EXISTS `data_order` (
   `id_order` int(11) NOT NULL,
   `nama_debitur` varchar(100) NOT NULL,
-  `limit_kredit` int(11) NOT NULL,
+  `limit_kredit` decimal(20,0) unsigned NOT NULL,
   `segmen_kredit` varchar(50) NOT NULL,
   `jenis_order` enum('Notaris','Asuransi','KJPP','') NOT NULL,
   `nama_pic_debitur` varchar(100) NOT NULL,
@@ -81,13 +81,36 @@ CREATE TABLE IF NOT EXISTS `data_order` (
 --
 
 INSERT INTO `data_order` (`id_order`, `nama_debitur`, `limit_kredit`, `segmen_kredit`, `jenis_order`, `nama_pic_debitur`, `telpon_pic_debitur`, `waktu`, `id_user`, `status`, `waktu_acc`) VALUES
-(1, 'Rudini', 70000, '300', 'Asuransi', 'Khairul', '082254646758', '2017-08-14 04:12:00', 2341, 'Approved', '2017-08-24 06:48:52'),
-(2, 'Khairul', 50000, '899', 'Notaris', 'Ujang', '08994858499', '2017-08-14 04:14:22', 4533, 'Approved', '2017-09-01 04:11:13'),
-(3, 'Ahmad Saleh', 50000, '50000', 'Notaris', 'Rudini', '08553959358', '2017-08-24 06:47:35', 2341, 'Approved', '2017-09-01 05:12:44'),
-(4, 'khairul', 70000000, 'VCC', 'Asuransi', 'Khairul', 'Adam', '2017-09-01 02:24:07', 2341, 'Approved', '2017-09-01 05:09:29'),
-(5, 'Khiarul', 788, 'SYC', 'KJPP', 'Khairul', '08449699', '2017-09-01 02:59:17', 2341, 'Approved', '2017-09-01 04:14:12'),
-(6, 'Khairul Fajeri', 1200000, 'VCG', 'KJPP', 'Fajar', '0822848284', '2017-09-01 03:17:40', 2341, 'Approved', '2017-09-01 05:15:32'),
-(7, 'fajeri', 899, 'HCK', 'Notaris', 'Khairul', '08399859', '2017-09-01 05:33:58', 2341, 'Waiting', NULL);
+(1, 'Rudini', '70000', '300', 'Asuransi', 'Khairul', '082254646758', '2017-08-14 04:12:00', 2341, 'Approved', '2017-08-24 06:48:52'),
+(2, 'Khairul', '50000', '899', 'Notaris', 'Ujang', '08994858499', '2017-08-14 04:14:22', 4533, 'Approved', '2017-09-01 04:11:13'),
+(3, 'Ahmad Saleh', '50000', '50000', 'Notaris', 'Rudini', '08553959358', '2017-08-24 06:47:35', 2341, 'Approved', '2017-09-01 05:12:44'),
+(4, 'khairul', '70000000', 'VCC', 'Asuransi', 'Khairul', 'Adam', '2017-09-01 02:24:07', 2341, 'Approved', '2017-09-01 05:09:29'),
+(5, 'Khiarul', '788', 'SYC', 'KJPP', 'Khairul', '08449699', '2017-09-01 02:59:17', 2341, 'Approved', '2017-09-01 04:14:12'),
+(6, 'Khairul Fajeri', '1200000', 'VCG', 'KJPP', 'Fajar', '0822848284', '2017-09-01 03:17:40', 2341, 'Approved', '2017-09-01 05:15:32'),
+(7, 'fajeri', '899', 'HCK', 'Notaris', 'Khairul', '08399859', '2017-09-01 05:33:58', 2341, 'Waiting', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rekanan`
+--
+
+CREATE TABLE IF NOT EXISTS `rekanan` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `limit_kredit` decimal(20,0) NOT NULL,
+  `jenis_order` enum('Asuransi','KJPP','Notaris') NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rekanan`
+--
+
+INSERT INTO `rekanan` (`id`, `nama`, `email`, `limit_kredit`, `jenis_order`) VALUES
+(6, 'adul', 'adul@gmail.com', '8000000000', 'Asuransi'),
+(7, 'adul', 'adul@gmail.com', '500000000', 'KJPP'),
+(8, 'notaris', 'notaris@kk.com', '30099999', 'Notaris');
 
 -- --------------------------------------------------------
 
@@ -133,6 +156,12 @@ ALTER TABLE `data_order`
   ADD PRIMARY KEY (`id_order`);
 
 --
+-- Indexes for table `rekanan`
+--
+ALTER TABLE `rekanan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -146,6 +175,11 @@ ALTER TABLE `agunan`
 --
 ALTER TABLE `data_order`
   MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `rekanan`
+--
+ALTER TABLE `rekanan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
