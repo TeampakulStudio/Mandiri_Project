@@ -4,13 +4,25 @@
 <ul id="tt1" class="easyui-tree" data-options="animate:true,dnd:true">
   
    <li data-options="iconCls:'icon-home'">
-        <span><a href="<?= base_url(); ?>Operatorbu">Home</a></span>
+        <span><a href="<?= base_url(); ?>Administrator">Home</a></span>
     </li>
     <li data-options="iconCls:'icon-master'">
-        <span>Bisnis Order</span>
+        <span>Data Rekanan</span>
         <ul>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Input Data Order</a></li>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/data">Data Order</a></li>
+<<<<<<< HEAD
+
+           
+            <li><a href="<?= base_url(); ?>Administrator/listasuransi">Asuransi</a></li>
+        
+            <li><a href="<?= base_url(); ?>Administrator/listkjpp">KJPP</a></li>
+        
+        
+            <li><a href="<?= base_url(); ?>Administrator/listnotaris">Notaris</a></li>
+
+            <li><a href="<?= base_url(); ?>Administrator/input">Input Rekanan</a></li>
+
+            
+>>>>>>> 72bfe1f4f0037697387683fbe448c9be2f251472
      
         </ul>
     </li>

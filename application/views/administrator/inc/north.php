@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +17,6 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/dist/css/skins/_all-skins.min.css">
-	
 </head>
 <body class="easyui-layout">
 	<div data-options="region:'north',border:false" style="height:100px;background:#013066;padding:10px"><img src="<?= base_url() ?>assets/images/logo.png" alt="" align="right"  height="80" width="200"></div>
