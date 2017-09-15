@@ -4,8 +4,8 @@ class Operatorbu extends Operatorbu_C
 {
 	public function index()
     {
-        $this->load->view('operatorbu/inc/north');
-    	$this->load->view('operatorbu/inc/west');
+      $this->load->view('operatorbu/inc/north');
+
         $this->load->view('operatorbu/index');
         $this->load->view('operatorbu/inc/south');
 
@@ -67,7 +67,7 @@ class Operatorbu extends Operatorbu_C
                 }
                 $this->session->set_flashdata('success', '<strong>Berhasil! </strong> Data Order Telah disimpan.');
                 $this->load->view('operatorbu/inc/north');
-                $this->load->view('operatorbu/inc/west');
+  
                 $this->load->view('operatorbu/input');
                 $this->load->view('operatorbu/inc/south');   
             }else{
@@ -79,7 +79,7 @@ class Operatorbu extends Operatorbu_C
             }
         }else{
             $this->load->view('operatorbu/inc/north');
-            $this->load->view('operatorbu/inc/west');
+       ;
             $this->load->view('operatorbu/input');
             $this->load->view('operatorbu/inc/south');    
         }
@@ -88,7 +88,7 @@ class Operatorbu extends Operatorbu_C
     public function data(){
         $data['order'] = $this->db->where('id_user', $this->session->userdata('id'))->get('data_order')->result();
         $this->load->view('operatorbu/inc/north');
-        $this->load->view('operatorbu/inc/west');
+ 
         $this->load->view('operatorbu/data',$data);
         $this->load->view('operatorbu/inc/south');
     }
@@ -97,7 +97,7 @@ class Operatorbu extends Operatorbu_C
         $data['order'] = $this->db->where('id_order',$id)->get('data_order')->row();
         $data['agunan'] = $this->db->where('id_order',$id)->get('agunan')->result();
         $this->load->view('operatorbu/inc/north');
-        $this->load->view('operatorbu/inc/west');
+
         $this->load->view('operatorbu/detail',$data);
         $this->load->view('operatorbu/inc/south');  
     }
