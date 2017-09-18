@@ -1,7 +1,68 @@
 <div title="Input" data-options="closable:true" style="padding:10px">
 
  <form action="<?= base_url() ?>Operatorbu/input" method="post">
-        <div style="margin:20px 0;"></div>
+       
+
+ 
+      <table style="font-weight:normal;">
+        <thead>
+            <tr>
+                <th data-options="field:'code'">  <div style="margin:1px 0;"></div>
+  <div class="easyui-panel" title="Data Order" style="width:100%;max-width:500px;padding:10px 10px;height:1500px">
+    <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="name" style="width:100%" data-options="label:'Nama Debitur :',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="email" style="width:100%" data-options="label:'Limit Kredit:',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="subject" style="width:100%" data-options="label:'Segmen Kredit:',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="message" style="width:100%" data-options="label:'Jenis Order:',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="message" style="width:100%" data-options="label:'Nama Pic Debitur:',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="message" style="width:100%" data-options="label:'Telp Pic Debitur:',labelWidth:120,required:true">
+      </div>
+      
+    </form>
+    <div style="text-align:center;padding:5px 0">
+      <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">Submit</a>
+      <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>
+    </div>
+    </th>
+                <th data-options="field:'name'">  <div style="margin:1px 0;"></div>
+  <div class="easyui-panel" title="Agunan" style="width:100%;max-width:500px;padding:10px 10px;height:1500px;">
+    <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+            <div class="copys hide after-add-more">
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="name" style="width:100%;" data-options="label:'No:',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="email" style="width:100%" data-options="label:'Alamat:',labelWidth:120,required:true">
+      </div>
+      <div style="margin-bottom:10px">
+        <input class="easyui-textbox" name="subject" style="width:100%" data-options="label:'Nama Pemilik:',labelWidth:120,required:true">
+      </div>  
+     </div> 
+      
+    </form>
+    <div style="text-align:center;padding:5px 0">
+      <a href="javascript:void(0)" class="easyui-linkbutton add-more"  style="width:80px">Add</a>
+      <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>
+    </div>
+    </th>
+             
+            </tr>
+        </thead>
+     
+    </table>
+
+     <div style="margin:20px 0;"></div>
          <?php $this->load->view('_partial/flash_message') ?>
      
                 <div class="box box-info">
@@ -41,31 +102,6 @@
                     </div>
                 
 
-  <div style="margin:1px 0;"></div>
-  <div class="easyui-panel" title="Data Order" style="width:100%;max-width:500px;padding:1px 1px;">
-    <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
-      <div style="margin-bottom:10px">
-        <input class="easyui-textbox" name="name" style="width:100%" data-options="label:'Nama Debitur:',required:true">
-      </div>
-      <div style="margin-bottom:20px">
-        <input class="easyui-textbox" name="email" style="width:100%" data-options="label:'Limit Kredit:',required:true,validType:'email'">
-      </div>
-      <div style="margin-bottom:20px">
-        <input class="easyui-textbox" name="subject" style="width:100%" data-options="label:'Segmen Kredit:',required:true">
-      </div>
-      <div style="margin-bottom:20px">
-
-        <input class="easyui-textbox" name="message" style="width:100%;height:60px" data-options="label:'Jenis Order:',labelWidth:100,multiline:true">
-      </div>
-      <div style="margin-bottom:20px">
-        <select class="easyui-combobox" name="language" label="Language" style="width:100%"><option value="ar">Arabic</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-cht">Chinese Traditional</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en" selected="selected">English</option><option value="et">Estonian</option><option value="fi">Finnish</option><option value="fr">French</option><option value="de">German</option><option value="el">Greek</option><option value="ht">Haitian Creole</option><option value="he">Hebrew</option><option value="hi">Hindi</option><option value="mww">Hmong Daw</option><option value="hu">Hungarian</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es">Spanish</option><option value="sv">Swedish</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="vi">Vietnamese</option></select>
-      </div>
-    </form>
-    <div style="text-align:center;padding:5px 0">
-      <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">Submit</a>
-      <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>
-    </div>
-  </div>
              <div class="col-md-6">
             <div class="box box-info">
                 <div class="box-header with-border">

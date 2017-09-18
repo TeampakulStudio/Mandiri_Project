@@ -4,7 +4,7 @@
       <script type="text/javascript">
      $(document).ready(function() {
       $(".add-more").click(function(){ 
-          var html = $(".copy").html();
+          var html = $(".copys").html();
           $(".after-add-more").after(html);
       });
 
