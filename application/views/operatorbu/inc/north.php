@@ -20,15 +20,15 @@
    <li data-options="iconCls:'icon-home'">
         <span><a href="<?= base_url(); ?>Operatorbu/index">Home</a></span>
     </li>
-    <li data-options="iconCls:'icon-master'">
+    <li data-options="iconCls:'icon-transaksi'">
         <span>Input Data Order</span>
         <ul>
 
          
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/data">Data Order</a></li>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Asuransi</a></li>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">KJPP</a></li>
-            <li data-options="iconCls:'icon-barang'"><a href="<?= base_url(); ?>Operatorbu/input">Notaris</a></li>
+            <li data-options="iconCls:'icon-lap'"><a href="<?= base_url(); ?>Operatorbu/data">Data Order</a></li>
+            <li data-options="iconCls:'icon-beli'"><a href="<?= base_url(); ?>Operatorbu/input">Asuransi</a></li>
+            <li data-options="iconCls:'icon-beli'"><a href="<?= base_url(); ?>Operatorbu/input">KJPP</a></li>
+            <li data-options="iconCls:'icon-beli'"><a href="<?= base_url(); ?>Operatorbu/input">Notaris</a></li>
 
 
   <script type="text/javascript">

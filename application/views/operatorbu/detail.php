@@ -1,17 +1,19 @@
-<div class="easyui-tabs">
-    <div title="Data Order" style="padding-left:10px; padding-right:20px; ">
+
+    <div title="Detail Order" style="padding-left:10px; padding-right:20px; ">
 		<div class="row">
             <!-- left column -->
             <div class="col-md-6">
               <!-- general form elements -->
-              <div class="box box-info">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Data Order</h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
+         
                             
                   <div class="box-body">
-                    <div class="form-group">
+                   
+                          <table style="font-weight:normal;">
+        <thead>
+            <tr>
+                <th data-options="field:'code'">  <div style="margin:1px 0;"></div>
+  <div class="easyui-panel" title="Data Order" style="width:500px;max-width:500px;padding:10px 10px;height:500px">
+  <div class="form-group">
                       <label for="inputEmail3" class="col-sm-3 control-label">Nama Debitur</label>
                       <label class="col-sm-1">:</label>
                       <label for="inputEmail3" class="col-sm-8 control-label"><?= $order->nama_debitur; ?></label>
@@ -45,31 +47,24 @@
                       <label for="inputEmail3" class="col-sm-3 control-label">Waktu Input</label>
                       <label class="col-sm-1">:</label>
                       <label for="inputEmail3" class="col-sm-8 control-label"><?= $order->waktu; ?></label>
-                    </div>
-                    
-                  </div><!-- /.box-body -->
-                   <div class="box-footer">
-                    <button type="button" onclick="javascript:history.back()" class="btn btn-primary">Back</button>
-                   
-                  </div><!-- /.box-footer -->
+                    </div
+      
+    
+    </th>
+                <th data-options="field:'name'">  <div style="margin:1px 0;"></div>
+  <div class="easyui-panel" title="Agunan" style="width:500px;max-width:500px;padding:10px 10px;height:500px;">
 
-                 
-              </div><!-- /.box -->
-             </div><!--col-md-6-->
-             <div class="col-md-6">
 
              <?php
-             	$i=0;
-             	foreach ($agunan as $value) {
-             	$i++;
+              $i=0;
+              foreach ($agunan as $value) {
+              $i++;
              ?>
 
-             <!-- Horizontal Form -->
-              <div class="box box-info">
-                <div class="box-header with-border">
+         
+        
                   <h3 class="box-title">Agunan <?= $i; ?></h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
+            
               
                    <div class="box-body">
                     <div class="form-group">
@@ -87,15 +82,14 @@
                       <label class="col-sm-1">:</label>
                       <label for="inputEmail3" class="col-sm-8 control-label"><?= $value->nama_pemilik; ?></label>
                     </div>
-                   
-                  </div><!-- /.box-body -->
+            
 
 
                  
-              </div><!-- /.box -->
+       
 
                <?php
-             	}
+              }
              ?>
 
 
@@ -105,7 +99,25 @@
 
                
 
-              </div><!-- /.col-md-6 -->
+    
+
+    </th>
+             
+            </tr>
+        </thead>
+     
+    </table>
+
+                  </div><!-- /.box-body -->
+                   <div class="box-footer">
+                    <button type="button" onclick="javascript:history.back()" class="btn btn-primary">Back</button>
+                   
+                  </div><!-- /.box-footer -->
+
+                 
+              </div><!-- /.box -->
+             </div><!--col-md-6-->
+            
 
 
 
